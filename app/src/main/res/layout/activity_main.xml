@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alber.navegadorweb.MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:id="@+id/fav"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/button7"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true" />
+
+        <EditText
+            android:id="@+id/textView4"
+            android:layout_alignBottom="@+id/button6"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/fav"
+            android:layout_toLeftOf="@+id/button6"
+            android:layout_toStartOf="@+id/button6"
+            android:layout_width="220dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/buscar"
+            android:id="@+id/button6"
+            android:layout_weight="1" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_height="wrap_content"
+            android:id="@+id/progreso"
+            android:layout_width="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp">
+
+        <ImageButton
+            app:srcCompat="@drawable/cancelar"
+            android:id="@+id/button7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/button9"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            app:srcCompat="@drawable/back"
+            android:id="@+id/button8"
+            android:layout_below="@+id/fav"
+            android:layout_toRightOf="@+id/fav"
+            android:layout_toEndOf="@+id/fav"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/forward"
+            android:id="@+id/button9"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/historial"
+            android:id="@+id/button11" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/delete"
+            android:id="@+id/button10"
+            android:layout_alignTop="@+id/imageButton10"
+            android:layout_toRightOf="@+id/imageButton10"
+            android:layout_toEndOf="@+id/imageButton10"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:layout_width="match_parent"
+            android:id="@+id/webview"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/button7"
+            android:layout_alignStart="@+id/button7"
+            android:layout_marginBottom="108dp"
+            android:layout_height="400dp">
+
+        </WebView>
+    </LinearLayout>
+
+</LinearLayout>
